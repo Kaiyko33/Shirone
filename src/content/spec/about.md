@@ -1,26 +1,30 @@
-# About Shirone
+# 关于 Kaho
 
-Welcome to the demo site of **Shirone** (白音) — an expressive, anime-inspired blog theme built on the **Material 3 Expressive (M3E)** design system.
+你好，欢迎来到 Kaho。这里是我在互联网上安的一个小家——一个用来写字、整理收藏、记录生活与热爱的个人博客。
 
-::github{repo="LyraVoid/Shirone"}
+## ✦ 为什么叫 Kaho
 
-## ✦ Design & Philosophy
+Kaho 没有宏大的含义，它更像一个安静的代号：音节短短的，念起来柔软，像一个适合在深夜安心拜访的朋友的名字。我希望这个地方也是如此——不喧哗、不追热点，只是安静地存在，等有心人推门进来。
 
-Shirone aims to combine the warmth of expressive anime aesthetics with the rigor of modern web engineering:
+## ✦ 创建理念
 
-- **Dynamic Chromatic Spell**: Full dynamic HCT palette generation responding seamlessly to light/dark modes and user preferences with zero layout shifts.
-- **Seamless Shell Navigation**: Persistent application shell driven by Swup for continuous music playback, smooth page transitions, and preserved state.
-- **Rich Story Grimoire**: Markdown and MDX authoring with KaTeX math, Mermaid diagrams, interactive admonitions, expressive code blocks, and adaptive image galleries.
-- **Zero Extra Burden**: Optional integrations (comments, analytics, music widgets) load dynamically on demand — zero DOM footprint and zero bundle overhead when disabled.
+我相信"记录"本身就是意义。日子一天天过去，大多数瞬间都会被遗忘，而写下来的文字、存下来的照片，会成为时间的锚点。所以这个站只遵循三条原则：
 
-## ✦ Tech Stack
+- **真诚记录**：只写真正经历过、思考过的东西，不为流量妥协；
+- **长期主义**：不追更新频率，但希望每一篇都经得起回看；
+- **温和分享**：把喜欢的动画、音乐、技术与感悟整理成文，与同好自然地交流。
 
-- **Framework**: [Astro 7](https://astro.build/) & [Svelte 5](https://svelte.dev/) (Runes-driven islands)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) & [Stylus](https://stylus-lang.com/)
-- **Design Standard**: [Material 3 Expressive](https://m3.material.io/)
-- **Typography**: Outfit & Yozai (悠哉圆体) with automated build-time subsetting
-- **Search Engine**: [Pagefind](https://pagefind.app/) offline full-text search
+## ✦ 这里有什么
 
-## ✦ Credits
+- **博客文章**：技术笔记、使用技巧与日常随笔。站点由增强版 Markdown 驱动，支持数学公式、流程图、精美的代码高亮、提示卡片与图片网格，阅读体验经过细致打磨；
+- **相册**：用镜头保存的瞬间，按主题整理成册；
+- **番剧与游戏**：追番进度与游玩记录，认真收藏每一份热爱；
+- **友链**：我的朋友们——互联网上互相照亮的星星。
 
-- **Font**: [Yozai Font (悠哉字体)](https://github.com/lxgw/yozai-font) by [lxgw](https://github.com/lxgw)
+## ✦ 关于这个站
+
+站点基于开源主题 Shirone 构建，采用 Material 3 Expressive 设计语言：明暗双主题、动态取色、离线全文搜索，服务端渲染优先，加载轻快，也在无障碍与对比度细节上花了功夫。感谢开源社区，让"拥有一个自己的小站"变得如此容易。
+
+## ✦ 发展愿景
+
+希望 Kaho 能一直安静地开下去：多年以后回看，它仍是一份让我骄傲的时间存档；也希望借助这里认识更多有趣的人。如果你恰好路过，喜欢这里的内容，欢迎常来坐坐——每一次相遇，都是一次问候。
