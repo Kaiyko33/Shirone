@@ -11,21 +11,23 @@ export const profileConfig: ProfileConfig = withUserConfig("profile", {
 	bio: "Life is an odyssey.",
 	links: [
 		{
-			name: "X",
-			icon: "fa6-brands:x-twitter", // Visit https://icones.js.org/ for icon codes
+			name: "Bilibili",
+			icon: "fa6-brands:bilibili", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://x.com",
+			url: "https://space.bilibili.com/431681695",
 		},
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
+			url: "https://steamcommunity.com/profiles/76561199248184771/",
 		},
 		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/LyraVoid/Shirone",
+			name: "Bangumi",
+			// 本地自定义 SVG（src/icons/bangumi.svg）：官方无矢量公开源，
+			// Iconify 各集合也均未收录，故手工制作对话气泡感叹号标识
+			icon: "fa6-brands:bilibili",
+			url: "https://bgm.tv/user/905406",
 		},
 	],
 });
