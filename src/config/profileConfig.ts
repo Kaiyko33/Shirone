@@ -24,8 +24,6 @@ export const profileConfig: ProfileConfig = withUserConfig("profile", {
 		},
 		{
 			name: "Bangumi",
-			// 本地自定义 SVG（src/icons/bangumi.svg）：官方无矢量公开源，
-			// Iconify 各集合也均未收录，故手工制作对话气泡感叹号标识
 			icon: "fa6-brands:bilibili",
 			url: "https://bgm.tv/user/905406",
 		},
