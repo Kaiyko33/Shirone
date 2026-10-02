@@ -57,8 +57,8 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// desktop 用于 >= 1024px；mobile 仅用于 < 1024px 的首页，手机非首页不显示壁纸。
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
-			desktop: ["assets/images/banner/desktop/1.webp"],
-			mobile: ["assets/images/banner/mobile/1.webp"],
+			desktop: ["assets/images/banner/desktop/yorushika1.jpg"],
+			mobile: ["assets/images/banner/desktop/yorushika1.jpg"],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
 		position: "center",
@@ -70,13 +70,9 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "Kaho",
+			title: "Kaho's Blog",
 			subtitle: [
-					"记录平凡日子里的微光",
-					"用文字收藏生活的温度",
-					"在代码与生活之间慢慢走",
-					"每一次分享都是一次问候",
-					"愿你在这里遇见相似的灵魂",
+					"海は広い　いつか必ず優しい人達に会えるから！",
 				],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
