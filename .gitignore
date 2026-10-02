@@ -66,6 +66,9 @@ test-results/
 playwright-report/
 tests/site/visual.spec.ts-snapshots/
 
+# IDE local history
+.history/
+
 # Lighthouse local reports
 artifacts/lighthouse/*
 !artifacts/lighthouse/.gitkeep
