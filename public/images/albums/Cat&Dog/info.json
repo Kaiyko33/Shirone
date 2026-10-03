@@ -1,0 +1,9 @@
+{
+  "title": "猫狗",
+  "date": "2026-10-03",
+  "location": "ニャーニャーワンワン",
+  "tags": ["reality","animal"],
+  "layout": "masonry",
+  "columns": 3,
+  "hidden": false
+}

@@ -8,7 +8,7 @@
 我喜欢日本音乐，最喜欢的乐队是Official髭男dism。
 
 ## 📕 我的收藏
-![1](../../assets/images/bookshelf-1.jpg "1")
-![2](../../assets/images/bookshelf-2.jpg "2")
-![3](../../assets/images/bookshelf-3.jpg "3")
-![4](../../assets/images/bookshelf-4.jpg "4")
+![1](../../assets/images/articles/bookshelf-1.jpg "1")
+![2](../../assets/images/articles/bookshelf-2.jpg "2")
+![3](../../assets/images/articles/bookshelf-3.jpg "3")
+![4](../../assets/images/articles/bookshelf-4.jpg "4")
