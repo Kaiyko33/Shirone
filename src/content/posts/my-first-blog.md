@@ -3,7 +3,7 @@ title: 我的第一篇文章
 published: 2026-10-02
 description: 这是我的第一篇文章！！！
 tags:
-  - 开站
+  - 建站
 category: 随笔
 ---
 
