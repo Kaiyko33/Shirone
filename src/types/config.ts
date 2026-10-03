@@ -80,6 +80,8 @@ export type SiteConfig = {
 	base?: string;
 	title: string;
 	subtitle: string;
+	/** 建站日期（ISO yyyy-MM-dd）。配置后侧栏统计的「运行天数」以它为起点；未配置时按最早一篇文章的发布日计算。 */
+	siteBirth?: string;
 	/** 默认社交媒体分享预览图（og:image / twitter:image），支持本地相对路径或远程绝对链接。未配置时自动回退为第一张桌面版横幅壁纸。 */
 	ogImage?: string;
 	topAppBar: {

@@ -14,6 +14,8 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	base: "/",
 	title: "Kaho",
 	subtitle: "Blog🐨",
+	// 建站日期（yyyy-MM-dd）：侧栏「运行天数」以它为起点；删除此行则回退为按最早一篇文章的发布日计算。
+	siteBirth: "2026-10-02",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
