@@ -74,12 +74,17 @@ const host = $derived.by(() => {
 		</span>
 		<span class="compass-tile__label">{entry.label}</span>
 		<span class="compass-tile__note">{entry.note || host}</span>
+		{#if entry.note}
+			<!-- 悬浮完整说明：副行省略的兜底，纯 CSS tooltip（键盘聚焦同显，触屏无 hover 不出现） -->
+			<span class="compass-tile__tip" aria-hidden="true">{entry.note}</span>
+		{/if}
 	</a>
 </article>
 
 <style lang="stylus">
 /* 竖向瓷砖：底色与站内卡片一致（card-bg + outline-variant 边框），hover 加深 */
 .compass-tile
+	position: relative
 	box-sizing: border-box
 	background: var(--card-bg)
 	border: 1px solid var(--outline-variant)
@@ -157,4 +162,38 @@ const host = $derived.by(() => {
 		white-space: nowrap
 		overflow: hidden
 		text-overflow: ellipsis
+
+	/* 悬浮完整说明气泡：on-surface 作反转面（两种模式下对比度均达标），
+	   悬停/键盘聚焦延迟 0.3s 浮现，离场立即消失；触屏无 hover 自然不出现 */
+	&__tip
+		position: absolute
+		left: 50%
+		bottom: calc(100% + var(--m3e-space-2))
+		z-index: 20
+		box-sizing: border-box
+		width: max-content
+		max-width: min(9.5em, 80vw)
+		padding: var(--m3e-space-2) var(--m3e-space-3)
+		border-radius: var(--shape-corner-s)
+		background: var(--on-surface)
+		color: var(--surface)
+		font: var(--m3e-type-body-small)
+		line-height: 1.4
+		text-align: center
+		white-space: normal
+		pointer-events: none
+		box-shadow: var(--m3e-elevation-2)
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-50%) translateY(0.25rem)
+		transition:
+			opacity var(--m3e-duration-short) var(--m3e-easing-standard),
+			transform var(--m3e-duration-short) var(--m3e-easing-standard),
+			visibility 0s linear var(--m3e-duration-short)
+
+		.compass-tile:hover &, .compass-tile:focus-within &
+			opacity: 1
+			visibility: visible
+			transform: translateX(-50%) translateY(0)
+			transition-delay: 0.3s
 </style>

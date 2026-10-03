@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	site: "https://811036.xyz/",
 	base: "/",
 	title: "Kaho",
-	subtitle: "一个基于 Material 3 的动漫风格博客",
+	subtitle: "Blog🐨",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",

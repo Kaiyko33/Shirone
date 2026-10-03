@@ -6,3 +6,9 @@
 我的专业和计算机相关但太笨了学不会，对英语、日语的学习倒是很感兴趣，日语的目标是过N2，能较轻松地啃生肉。
 
 我喜欢日本音乐，最喜欢的乐队是Official髭男dism。
+
+## 📕 我的收藏
+![1](src\assets\images\bookshelf-1.jpg "1")
+![2](src\assets\images\bookshelf-2.jpg "2")
+![3](src\assets\images\bookshelf-3.jpg "3")
+![4](src\assets\images\bookshelf-4.jpg "4")
