@@ -3,7 +3,7 @@ title: 去红山动物园玩
 published: 2026-09-04
 description: 好久没出去 累死了
 tags:
-  - 外出游玩
+  - 出去玩
 category: 随笔
 ---
 
