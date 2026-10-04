@@ -141,4 +141,12 @@ export const musicTracks: readonly TrackDescriptor[] = [
 		source: "/assets/music/url/Official髭男dism - 宿命.mp3",
 		duration: 301,
 	},
+	{
+		id: "17",
+		title: "Goodbye to Your Love",
+		artist: "Re：Plus&二宮愛",
+		cover: "assets/images/music/17.jpg",	
+		source: "/assets/music/url/Goodbye to Your Love-Re：Plus&二宮愛.mp3",
+		duration: 301,
+	}
 ];
