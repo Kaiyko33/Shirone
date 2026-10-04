@@ -7,6 +7,7 @@ import { compassConfig } from "@/config/compassConfig";
 import { devicesConfig } from "@/config/devicesConfig";
 import { friendsConfig } from "@/config/friendsConfig";
 import { gamesConfig } from "@/config/gamesConfig";
+import { mediaLogConfig } from "@/config/mediaLogConfig";
 import { momentsConfig } from "@/config/momentsConfig";
 import { projectsConfig } from "@/config/projectsConfig";
 import { seriesConfig } from "@/config/seriesConfig";
@@ -67,6 +68,12 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		url: "/compass/",
 		icon: "material-symbols:explore-rounded",
 		pageKey: "compass",
+	},
+	MediaLog: {
+		name: i18n(I18nKey.mediaLog),
+		url: "/manabi/",
+		icon: "material-symbols:menu-book-outline-rounded",
+		pageKey: "mediaLog",
 	},
 	Skills: {
 		name: i18n(I18nKey.skills),
@@ -142,6 +149,7 @@ const defaultNavBarConfig: NavBarConfig = {
 		LinkPresets.Home,
 		LinkPresets.Archive,
 		LinkPresets.Anime,
+		LinkPresets.MediaLog,
 		LinkPresets.Albums,
 		{
 			name: i18n(I18nKey.more),
@@ -182,6 +190,7 @@ const unavailableFeatureRoutes: ReadonlySet<string> = new Set([
 	...(momentsConfig.enable ? [] : ["/moments"]),
 	...(animeConfig.enable ? [] : ["/anime"]),
 	...(compassConfig.enable ? [] : ["/compass"]),
+	...(mediaLogConfig.enable ? [] : ["/manabi"]),
 	...(albumsConfig.enable ? [] : ["/albums"]),
 	...(skillsConfig.enable ? [] : ["/skills"]),
 	...(projectsConfig.enable ? [] : ["/projects"]),

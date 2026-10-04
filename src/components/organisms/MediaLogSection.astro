@@ -1,0 +1,250 @@
+---
+/**
+ * 年度作品记录板块（/manabi/）：分类 → 年份分组 → 作品名列表。
+ * 折叠版式：分类行与年份行均为原生 <details>/<summary>，零客户端脚本，
+ * SSR 下开箱可用且不受 Swup 替换影响。数据来自 src/data/mediaLog.ts
+ * （构建期取数；空分类 / 空年份分组整体隐藏；年份倒序展示；
+ *   仅第一个分类默认展开，展开分类内的年份默认全部展开）。
+ */
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import { Icon } from "astro-icon/components";
+import { mediaLogData } from "../../data/mediaLog";
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+
+const worksCountTemplate = i18n(I18nKey.mediaLogWorksCount);
+
+const categories = mediaLogData
+	.map((category) => ({
+		...category,
+		years: [...category.years]
+			.map((group) => ({
+				...group,
+				// 忽略空条目（误留的空字符串），避免渲染出无文字的圆点行
+				items: group.items.filter((item) => item.trim()),
+			}))
+			.filter((group) => group.items.length > 0)
+			.sort((a, b) => b.year - a.year),
+	}))
+	.filter((category) => category.years.length > 0)
+	.map((category) => ({
+		...category,
+		total: category.years.reduce((sum, group) => sum + group.items.length, 0),
+	}));
+---
+
+<section class="media-log">
+	<header class="media-log__header">
+		<h1 class="media-log__title">{title}</h1>
+		{description && <p class="media-log__description">{description}</p>}
+	</header>
+	{categories.map((category, categoryIndex) => (
+		<details class="media-log__category" open={categoryIndex === 0}>
+			<summary class="media-log__category-summary">
+				<span class="media-log__category-head">
+					{category.icon && (
+						<Icon
+							name={category.icon}
+							aria-hidden="true"
+							is:inline
+							class="media-log__category-icon"
+						/>
+					)}
+					<span class="media-log__category-name">{category.name}</span>
+				</span>
+				<span class="media-log__category-meta">
+					<span class="media-log__category-count">
+						<span class="media-log__count-dot" aria-hidden="true" />
+						{worksCountTemplate.replace("{count}", String(category.total))}
+					</span>
+					<Icon
+						name="material-symbols:expand-more-rounded"
+						aria-hidden="true"
+						is:inline
+						class="media-log__chevron"
+					/>
+				</span>
+			</summary>
+			<div class="media-log__years">
+				{category.years.map((group) => (
+					<details class="media-log__year" open>
+						<summary class="media-log__year-summary">
+							<span class="media-log__year-name">{group.year}</span>
+							<span class="media-log__year-count">
+								{worksCountTemplate.replace(
+									"{count}",
+									String(group.items.length),
+								)}
+							</span>
+							<Icon
+								name="material-symbols:expand-more-rounded"
+								aria-hidden="true"
+								is:inline
+								class="media-log__chevron"
+							/>
+						</summary>
+						<ul class="media-log__list">
+							{group.items.map((item) => (
+								<li class="media-log__item">{item}</li>
+							))}
+						</ul>
+					</details>
+				))}
+			</div>
+		</details>
+	))}
+</section>
+
+<style lang="stylus">
+.media-log
+	&__header
+		margin: 0 0 var(--m3e-space-5)
+
+	&__title
+		font: var(--m3e-type-headline-large)
+		font-weight: 700
+		color: var(--on-surface)
+		margin: 0 0 var(--m3e-space-2)
+
+	&__description
+		font: var(--m3e-type-body-medium)
+		color: var(--on-surface-variant)
+		margin: 0
+
+// 分类折叠行（summary 重置原生三角标记）
+.media-log__category-summary
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: var(--m3e-space-3)
+	padding: var(--m3e-space-3) var(--m3e-space-2)
+	border-radius: var(--shape-corner-medium)
+	cursor: pointer
+	list-style: none
+	transition: background-color var(--m3e-duration-short) var(--m3e-easing-standard)
+
+	&:hover
+		background: unquote("color-mix(in oklab, var(--on-surface) 6%, transparent)")
+
+	&::-webkit-details-marker
+		display: none
+
+.media-log__category + .media-log__category
+	margin-top: var(--m3e-space-2)
+
+.media-log__category-head
+	display: flex
+	align-items: center
+	gap: var(--m3e-space-3)
+	min-width: 0
+
+.media-log__category-icon
+	font-size: 1.375rem
+	color: var(--primary)
+	flex-shrink: 0
+
+.media-log__category-name
+	font: var(--m3e-type-title-large)
+	font-weight: 700
+	color: var(--on-surface)
+
+.media-log__category-meta
+	display: flex
+	align-items: center
+	gap: var(--m3e-space-3)
+	flex-shrink: 0
+
+.media-log__category-count
+	display: inline-flex
+	align-items: center
+	gap: var(--m3e-space-2)
+	font: var(--m3e-type-label-large)
+	color: var(--on-surface-variant)
+
+.media-log__count-dot
+	width: 0.5rem
+	height: 0.5rem
+	border-radius: var(--shape-corner-full)
+	border: 2px solid var(--primary)
+	opacity: 0.75
+
+// 分类展开后的年份区：与分类名对齐（图标宽 + 间距）
+.media-log__years
+	padding-left: calc(1.375rem + var(--m3e-space-3))
+
+.media-log__year-summary
+	display: flex
+	align-items: baseline
+	gap: var(--m3e-space-2)
+	padding: var(--m3e-space-2) var(--m3e-space-2) var(--m3e-space-1)
+	border-radius: var(--shape-corner-medium)
+	cursor: pointer
+	list-style: none
+
+	&::-webkit-details-marker
+		display: none
+
+.media-log__year-name
+	font: var(--m3e-type-title-medium)
+	font-weight: 700
+	color: var(--on-surface)
+
+.media-log__year-count
+	font: var(--m3e-type-label-medium)
+	color: var(--on-surface-variant)
+
+// 展开箭头：展开时上翻；年份行内紧跟计数文字
+.media-log__chevron
+	color: var(--on-surface-variant)
+	flex-shrink: 0
+	transition: transform var(--m3e-duration-short) var(--m3e-easing-standard)
+
+details[open] > .media-log__category-summary .media-log__chevron
+	transform: rotate(180deg)
+
+details[open] > .media-log__year-summary .media-log__chevron
+	transform: rotate(180deg)
+
+// 作品列表：左侧竖线 + 圆点记号的竖排列表
+.media-log__list
+	list-style: none
+	margin: 0
+	padding: 0 0 var(--m3e-space-3) calc(var(--m3e-space-2) + 0.75rem)
+	border-left: 2px solid var(--outline-variant)
+	margin-left: var(--m3e-space-2)
+
+.media-log__item
+	font: var(--m3e-type-body-large)
+	color: var(--on-surface)
+	line-height: 1.8
+	padding: 0 var(--m3e-space-2) 0 var(--m3e-space-5)
+	border-radius: var(--shape-corner-medium)
+	position: relative
+	transition: background-color var(--m3e-duration-short) var(--m3e-easing-standard)
+
+	&::before
+		content: ""
+		position: absolute
+		left: var(--m3e-space-1)
+		top: 0.68em
+		width: 0.55rem
+		height: 0.55rem
+		border-radius: var(--shape-corner-full)
+		border: 1.5px solid var(--primary)
+		opacity: 0.75
+		transition: background-color var(--m3e-duration-short) var(--m3e-easing-standard), opacity var(--m3e-duration-short) var(--m3e-easing-standard), transform var(--m3e-duration-short) var(--m3e-easing-standard)
+
+	&:hover
+		background: unquote("color-mix(in oklab, var(--on-surface) 6%, transparent)")
+
+		&::before
+			background: var(--primary)
+			opacity: 1
+			transform: scale(1.3)
+</style>

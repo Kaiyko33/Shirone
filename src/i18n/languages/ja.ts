@@ -50,6 +50,10 @@ export const ja: Translation = {
 	[Key.compass]: "サイト羅針盤",
 	[Key.compassBanner]:
 		"よく使うサイト —— 開発ツール、ドキュメント、そして迷宮の奥へ。",
+	[Key.mediaLog]: "学びログ",
+	[Key.mediaLogBanner]: "毎年読んだ本、観た漫画の記録。",
+	[Key.mediaLogIntro]: "2026年から、毎年読んだ本、観た漫画の記録。",
+	[Key.mediaLogWorksCount]: "{count} 作品",
 	[Key.compassNoResults]: "検索条件に一致するサイトがありません",
 	[Key.compassCounts]: "個のサイト",
 

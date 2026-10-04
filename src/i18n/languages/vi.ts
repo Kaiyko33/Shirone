@@ -50,6 +50,10 @@ export const vi: Translation = {
 	[Key.compass]: "La bàn",
 	[Key.compassBanner]:
 		"Các trang tôi hay ghé — công cụ lập trình, tài liệu và những hố thỏ.",
+	[Key.mediaLog]: "Nhật ký",
+	[Key.mediaLogBanner]: "Truyện tranh đã xem và sách đã đọc qua mỗi năm.",
+	[Key.mediaLogIntro]: "Truyện tranh đã xem và sách đã đọc qua mỗi năm, bắt đầu từ 2026.",
+	[Key.mediaLogWorksCount]: "{count} tác phẩm",
 	[Key.compassNoResults]: "Không có trang nào khớp với tìm kiếm",
 	[Key.compassCounts]: "trang",
 

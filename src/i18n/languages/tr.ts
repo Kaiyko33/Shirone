@@ -49,6 +49,10 @@ export const tr: Translation = {
 	[Key.compass]: "Pusula",
 	[Key.compassBanner]:
 		"Sık sık döndüğüm siteler — geliştirme araçları, dokümanlar ve tavşan delikleri.",
+	[Key.mediaLog]: "Günlük",
+	[Key.mediaLogBanner]: "Her yıl okunan kitaplar ve izlenen mangalar.",
+	[Key.mediaLogIntro]: "2026'dan itibaren her yıl okunan kitaplar ve izlenen mangalar.",
+	[Key.mediaLogWorksCount]: "{count} eser",
 	[Key.compassNoResults]: "Aramanızla eşleşen site yok",
 	[Key.compassCounts]: "site",
 

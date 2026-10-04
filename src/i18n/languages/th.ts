@@ -46,6 +46,10 @@ export const th: Translation = {
 
 	[Key.compass]: "เข็มทิศ",
 	[Key.compassBanner]: "เว็บไซต์ที่ฉันกลับมาใช้บ่อย — เครื่องมือพัฒนา เอกสาร และหลุมกระต่าย",
+	[Key.mediaLog]: "บันทึก",
+	[Key.mediaLogBanner]: "บันทึกมังงะที่ดูและหนังสือที่อ่านในแต่ละปี",
+	[Key.mediaLogIntro]: "บันทึกมังงะที่ดูและหนังสือที่อ่านในแต่ละปี ตั้งแต่ปี 2026",
+	[Key.mediaLogWorksCount]: "{count} เรื่อง",
 	[Key.compassNoResults]: "ไม่พบเว็บไซต์ที่ตรงกับคำค้นหา",
 	[Key.compassCounts]: "เว็บไซต์",
 

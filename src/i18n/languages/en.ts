@@ -50,6 +50,10 @@ export const en: Translation = {
 	[Key.compass]: "Compass",
 	[Key.compassBanner]:
 		"Handy sites I keep coming back to — dev tools, docs and rabbit holes.",
+	[Key.mediaLog]: "Media Log",
+	[Key.mediaLogBanner]: "Manga watched and books read, year by year.",
+	[Key.mediaLogIntro]: "Manga watched and books read each year, starting from 2026.",
+	[Key.mediaLogWorksCount]: "{count} works",
 	[Key.compassNoResults]: "No sites matched your search",
 	[Key.compassCounts]: "sites",
 

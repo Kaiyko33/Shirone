@@ -165,6 +165,12 @@ export const CONFIG_DOMAINS = Object.freeze([
 		module: "@/types/umamiConfig",
 	},
 	{
+		key: "mediaLog",
+		file: "mediaLog",
+		type: "MediaLogConfig",
+		module: "@/types/mediaLogConfig",
+	},
+	{
 		key: "about",
 		file: "about",
 		type: "AboutConfig",

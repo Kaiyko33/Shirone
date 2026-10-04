@@ -34,6 +34,7 @@ export type SidebarPage =
 	| "moments" // 动态
 	| "anime" // 番剧收藏
 	| "compass" // 站点罗盘
+	| "mediaLog" // 年度作品记录（/manabi/）
 	| "skills" // 技能
 	| "projects" // 项目
 	| "devices" // 设备展示

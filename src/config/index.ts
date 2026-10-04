@@ -77,3 +77,4 @@ export {
 	resolveUmamiOptions,
 	umamiConfig,
 } from "./umamiConfig";
+export { mediaLogConfig } from "./mediaLogConfig";

@@ -49,6 +49,10 @@ export const ko: Translation = {
 	[Key.compass]: "나침반",
 	[Key.compassBanner]:
 		"자주 찾는 사이트 — 개발 도구, 문서, 그리고 토끼굴 속으로.",
+	[Key.mediaLog]: "기록",
+	[Key.mediaLogBanner]: "매년 본 만화와 읽은 책의 기록.",
+	[Key.mediaLogIntro]: "2026년부터 매년 본 만화와 읽은 책의 기록.",
+	[Key.mediaLogWorksCount]: "{count}개 작품",
 	[Key.compassNoResults]: "검색어와 일치하는 사이트가 없습니다",
 	[Key.compassCounts]: "개 사이트",
 

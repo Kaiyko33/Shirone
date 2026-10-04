@@ -47,6 +47,10 @@ enum I18nKey {
 
 	compass = "compass",
 	compassBanner = "compassBanner",
+	mediaLog = "mediaLog",
+	mediaLogBanner = "mediaLogBanner",
+	mediaLogIntro = "mediaLogIntro",
+	mediaLogWorksCount = "mediaLogWorksCount",
 	compassNoResults = "compassNoResults",
 	compassCounts = "compassCounts",
 

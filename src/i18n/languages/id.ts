@@ -50,6 +50,10 @@ export const id: Translation = {
 	[Key.compass]: "Kompas",
 	[Key.compassBanner]:
 		"Situs yang sering saya kunjungi — alat pengembangan, dokumentasi, dan lubang kelinci.",
+	[Key.mediaLog]: "Catatan",
+	[Key.mediaLogBanner]: "Manga yang ditonton dan buku yang dibaca setiap tahun.",
+	[Key.mediaLogIntro]: "Manga yang ditonton dan buku yang dibaca setiap tahun sejak 2026.",
+	[Key.mediaLogWorksCount]: "{count} karya",
 	[Key.compassNoResults]: "Tidak ada situs yang cocok dengan pencarian",
 	[Key.compassCounts]: "situs",
 

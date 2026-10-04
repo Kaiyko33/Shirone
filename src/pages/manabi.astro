@@ -1,0 +1,34 @@
+---
+/**
+ * 年度作品记录页（/manabi/）：按分类（漫画/书）与年份分组记录作品。
+ * 数据见 src/data/mediaLog.ts；mediaLogConfig.enable 为 false 时重定向 404。
+ */
+import MediaLogSection from "@components/organisms/MediaLogSection.astro";
+import I18nKey from "@i18n/i18nKey";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { mediaLogConfig } from "@/config";
+import { i18n } from "@i18n/translation";
+import { resolveI18nText } from "@utils/i18n-utils";
+
+if (!mediaLogConfig.enable) {
+	return Astro.redirect("/404/");
+}
+
+const pageTitle = resolveI18nText(mediaLogConfig.title, I18nKey.mediaLog);
+const pageDescription = resolveI18nText(
+	mediaLogConfig.description ?? "",
+	I18nKey.mediaLog,
+);
+---
+
+<MainGridLayout
+	title={pageTitle}
+	description={pageDescription || pageTitle}
+	page="mediaLog"
+>
+    {/* 卡片内引言与横幅副标题分开：横幅用 mediaLogBanner，此处用 mediaLogIntro */}
+    <MediaLogSection
+        title={pageTitle}
+        description={i18n(I18nKey.mediaLogIntro)}
+    />
+</MainGridLayout>

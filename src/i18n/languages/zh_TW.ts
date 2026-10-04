@@ -46,6 +46,10 @@ export const zh_TW: Translation = {
 
 	[Key.compass]: "站點羅盤",
 	[Key.compassBanner]: "常去的站點 —— 開發工具、文件與各種兔子洞。",
+	[Key.mediaLog]: "年度記錄",
+	[Key.mediaLogBanner]: "記下每一年看過的漫畫與讀過的書。",
+	[Key.mediaLogIntro]: "從2026年開始，記下每一年看過的漫畫與讀過的書。",
+	[Key.mediaLogWorksCount]: "{count} 部作品",
 	[Key.compassNoResults]: "沒有符合條件的站點",
 	[Key.compassCounts]: "個站點",
 

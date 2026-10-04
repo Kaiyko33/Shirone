@@ -49,6 +49,10 @@ export const es: Translation = {
 	[Key.compass]: "Brújula",
 	[Key.compassBanner]:
 		"Sitios a los que vuelvo a menudo — herramientas de desarrollo, documentación y madrigueras de conejo.",
+	[Key.mediaLog]: "Registro",
+	[Key.mediaLogBanner]: "Manga y libros de cada año.",
+	[Key.mediaLogIntro]: "Manga y libros de cada año, desde 2026.",
+	[Key.mediaLogWorksCount]: "{count} obras",
 	[Key.compassNoResults]: "Ningún sitio coincide con tu búsqueda",
 	[Key.compassCounts]: "sitios",
 
